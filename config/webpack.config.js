@@ -385,8 +385,10 @@ module.exports = function (webpackEnv) {
               test: [/\.bmp$/, /\.gif$/, /\.jpe?g$/, /\.png$/],
               loader: require.resolve('url-loader'),
               options: {
-                limit: imageInlineSizeLimit,
+                limit: 1024 * 10,
                 name: 'static/media/[name].[hash:8].[ext]',
+                outputPath: 'images/',
+                esModule: false
               },
             },
             // Process application JS with Babel.
