@@ -1,18 +1,13 @@
 .bar {
   position: fixed;
   top: 0;
-  left: -120px;
+  left: -15vw;
   z-index: 9999;
   transition: all 0.5s;
 }
 .bar .text {
   padding-left: 34px !important;
   font-size: 10px;
-}
-.bar .close {
-  position: absolute;
-  top: 15px;
-  left: 55px;
 }
 .left {
   position: absolute;
@@ -24,24 +19,24 @@
 .left .menu-btn {
   position: absolute;
   z-index: 99;
-  top: 3px;
+  top: -0.5vh;
 }
 .left .menu-btn .menu-line {
-  width: 20px;
-  height: 2px;
+  width: 3vw;
+  height: 0.3vw;
   background-color: rgba(255, 255, 255, 0.7);
   margin: 3px 0;
-  border-radius: 2px;
+  border-radius: 1px;
   transition: all 0.5s;
 }
 .left .menu-btn.closed .menu-line:nth-child(1) {
-  transform: translateY(5px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
 }
 .left .menu-btn.closed .menu-line:nth-child(2) {
   opacity: 0;
 }
 .left .menu-btn.closed .menu-line:nth-child(3) {
-  transform: translateY(-5px) rotate(-45deg);
+  transform: translateY(-4.5px) rotate(-45deg);
 }
 .ant-menu-submenu {
   background-color: rgba(0, 0, 0, 0.7);

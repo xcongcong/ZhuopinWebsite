@@ -18,8 +18,8 @@
   z-index: 100;
 }
 .point_nav .point_nav_item {
-  width: 5px;
-  height: 5px;
+  width: 0.7vw;
+  height: 0.7vw;
   border-radius: 50%;
   margin-bottom: 10px;
   transition: background 0.5s;

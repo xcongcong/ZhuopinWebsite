@@ -3,6 +3,8 @@
     import PubSub from 'pubsub-js' //引入消息订阅
     // import { throttle } from "utils/loadash"; //暂不节流
 
+    //
+
     class Fullpage extends React.Component {
 
         // componentDidMount() {
@@ -76,36 +78,39 @@
         this.setState({ pageList: [this.state.pageList] });
     }
     render() {
-        return (
-        <div className="fullpage_container" onWheel={this.debounceHandleScroll}>
-            {this.state.pageList.map((x, i) => (
-            <div
-                className={`fullpage_item item_${i + 1}`}
-                key={i}
-                style={{
-                top: -this.state.currentPage + i + 1 + "00vh",
-                }}
-            >
-                {x}
-            </div>
-            ))}
-            <div className="point_nav">
-            {this.state.pageList.map((x, i) => (
-                <div
-                className="point_nav_item"
-                style={{
-                    background:
-                    i + 1 === this.state.currentPage ? "#333" : "#cccaca",
-                }}
-                key={i}
-                onMouseEnter={() => this.changeCurrentPage(i + 1)}
-                ></div>
-            ))}
-            </div>
-        </div>
-        );
-    }
-    }
+            return (
+                <div className="fullpage">
+                    <div className="fullpage_container" onWheel={this.debounceHandleScroll}>
+                    {this.state.pageList.map((x, i) => (
+                    <div
+                        className={`fullpage_item item_${i + 1}`}
+                        key={i}
+                        style={{
+                        top: -this.state.currentPage + i + 1 + "00vh",
+                        }}
+                    >
+                        {x}
+                    </div>
+                    ))}
+                    <div className="point_nav">
+                    {this.state.pageList.map((x, i) => (
+                        <div
+                        className="point_nav_item"
+                        style={{
+                            background:
+                            i + 1 === this.state.currentPage ? "#333" : "#cccaca",
+                        }}
+                        key={i}
+                        onMouseEnter={() => this.changeCurrentPage(i + 1)}
+                        ></div>
+                    ))}
+                    </div>
+                </div>
+                </div>
+                
+            );
+            }
+        }
     const FullpageItem = (props) => {
     let { children } = props;
     return <div style={{ height: "100%", width: "100%" }}>{children}</div>;

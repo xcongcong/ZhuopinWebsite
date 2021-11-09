@@ -60,7 +60,7 @@ export default class Leftbar extends Component {
             
     render() {
         return (
-                <div>
+                <div className="leftbar">
                     <div className="left">
                         <div className="btn1">
                             <div className="menu-btn" onClick={this.handle}>
@@ -74,7 +74,7 @@ export default class Leftbar extends Component {
                         {/* <HomeOutlined /> */}
                         {/* <Icon type="caret-down" className="close" />
                         <Icon type="home" /> */}
-                        <div style={{width:'20px', height:'20px',position:'absolute',top:'80vh',left:'3.5vh'}}>
+                        <div style={{width:'20px', height:'20px',position:'absolute',top:'85vh',left:'3.5vh'}}>
                             <Button type="primary" onClick={this.OpenLogin}>用户登陆</Button>
                         </div>
                     <Menu
@@ -82,7 +82,7 @@ export default class Leftbar extends Component {
                     mode="inline"
                     openKeys={this.state.openKeys}
                     onOpenChange={this.onOpenChange}
-                    style={{ width: 120 ,height:500,paddingTop:40,}}
+                    style={{ width: 120 ,height:'100vh',paddingTop:'10vh',}}
                 >
                     <SubMenu
                     key="sub1"

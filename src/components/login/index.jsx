@@ -55,7 +55,8 @@ export default class Login extends Component {
 
     render() {
         return (
-            <div className="login-bg">
+            <div className="login">
+                <div className="login-bg">
                 <div className="login-content">
                     <img src={close} alt="guanbi" onClick={this.CloseLogin}/>
                     <h2>用户登陆</h2>
@@ -107,8 +108,8 @@ export default class Login extends Component {
 
                             <Form.Item
                                 wrapperCol={{
-                                offset: 8,
-                                span: 16,
+                                offset: 0,
+                                span: 30,
                                 }}
                             >
                                 <Button type="primary" htmlType="submit" className="login-form-button">
@@ -118,6 +119,8 @@ export default class Login extends Component {
                         </Form>
                 </div>
             </div>
+            </div>
+            
             
         )
     }

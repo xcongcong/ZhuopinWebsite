@@ -112,7 +112,7 @@
 
         render() {
             return (
-                    <div>
+                    <div className="content">
                         <Leftbar/>
                         <div className="box_container">
                             {/* login登陆-------------------------------------- */}
@@ -132,7 +132,7 @@
                             {/* {/* 跳动箭头 *--------------------------------------/} */}
                             <div class="animate-bounce-down">
                                 <i>
-                                <img src={down} alt="down" style={{width:'10%'}} className="down"/>
+                                <img src={down} alt="down" className="down"/>
                                 </i>
                             </div>
                             {/* 轮播图组件 -----------------------------------*/}

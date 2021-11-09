@@ -4,13 +4,13 @@ import './index.css'
 import png1 from './images/1.png'
 import png2 from './images/2.png'
 import png3 from './images/3.png'
-
+//轮播图组件
 
 
 export default class Slideshow extends Component {
     render() {
         return (
-            <div>
+            <div className="slideshow">
                 <Carousel autoplay>
                 <div>
                     <img src={png1} alt="img"/>

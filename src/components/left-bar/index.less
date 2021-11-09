@@ -3,7 +3,7 @@
     // height:500px;
     position:fixed;
     top: 0;
-    left:-120px;
+    left:-15vw;
     z-index: 9999;
     transition: all .5s;
     // color:red;//控制关闭按钮的颜色
@@ -11,12 +11,6 @@
     .text{
         padding-left: 34px !important;
         font-size:10px;
-    }
-    //关闭按钮
-    .close{
-        position:absolute;
-        top: 15px;
-        left: 55px;
     }
 }
 .left{ //汉堡按钮
@@ -30,24 +24,24 @@
     .menu-btn{
         position:absolute;
         z-index: 99;
-        top: 3px;
+        top: -.5vh;
     }
     .menu-btn .menu-line{
-        width:20px;
-        height:2px;
+        width:3vw;
+        height:.3vw;
         background-color:rgba(255,255,255,0.7);
         margin: 3px 0;
-        border-radius:2px;
+        border-radius:1px;
         transition: all .5s;
     }
     .menu-btn.closed .menu-line:nth-child(1){
-        transform:translateY(5px) rotate(45deg);
+        transform:translateY(6px) rotate(45deg);
     }
     .menu-btn.closed .menu-line:nth-child(2){
         opacity: 0;
     }
     .menu-btn.closed .menu-line:nth-child(3){
-        transform:translateY(-5px) rotate(-45deg);
+        transform:translateY(-4.5px) rotate(-45deg);
     }
 }
 //菜单颜色

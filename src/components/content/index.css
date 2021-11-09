@@ -1,7 +1,7 @@
 .box_container .text-modle {
   position: absolute;
   top: 80vh;
-  left: 55vh;
+  left: 50vh;
   z-index: 9999;
   color: #fff;
   transition: all 0.7s;
@@ -9,8 +9,8 @@
   text-align: center;
 }
 .box_container .text-modle img {
-  width: 60%;
-  height: 60%;
+  width: 50vw;
+  height: 20vh;
 }
 .box_container .text-modle3 {
   position: absolute;
@@ -23,8 +23,8 @@
   text-align: center;
 }
 .box_container .text-modle3 img {
-  width: 40%;
-  height: 40%;
+  width: 30vw;
+  height: 13vh;
 }
 .box_container .liaotian {
   display: flex;
@@ -42,12 +42,12 @@
   padding-bottom: 0.5vh;
 }
 .box_container .liaotian .qq img {
-  width: 20px;
-  height: 20px;
+  width: 2vw;
+  height: 2vw;
 }
 .box_container .liaotian .top img {
-  width: 15px;
-  height: 15px;
+  width: 1.5vw;
+  height: 1.5vw;
 }
 .box_container .company {
   position: absolute;
@@ -62,17 +62,17 @@
   flex-wrap: wrap;
 }
 .box_container .company ul li {
-  padding-left: 35px;
-  padding-top: 20px;
+  padding-left: 4vw;
+  padding-top: 2.5vw;
 }
 .box_container .company ul li img {
-  width: 80px;
-  height: 40px;
+  width: 10vw;
+  height: 5vw;
   display: block;
 }
 .box_container img {
   width: 100%;
-  height: 480px;
+  height: 100vh;
 }
 @-webkit-keyframes bounce-down {
   25% {
@@ -103,14 +103,12 @@
   animation: bounce-down 1.5s linear infinite;
   position: fixed;
   z-index: 9;
-  top: 100px;
-  left: 100px;
   top: 85%;
-  left: 50%;
+  left: 48.5vw;
 }
 .box_container .animate-bounce-down img {
-  width: 10% !important;
-  height: 10% !important;
+  width: 3vw !important;
+  height: 3vw !important;
 }
 @-webkit-keyframes bounce-up {
   25% {

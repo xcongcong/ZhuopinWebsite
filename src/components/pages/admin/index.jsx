@@ -9,7 +9,7 @@ export default class Admin extends Component {
             return <Redirect to='/login'/> //判断内存中有没有用户信息，如果没有就跳回登陆，禁止进入 后台
         }
         return (
-            <div>
+            <div className="admin">
                 Hellow:{user}
             </div>
         )
