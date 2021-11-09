@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { Form, Input, Button,message } from 'antd';
 import './index.css'
 import close from './images/guanbi.png'
+import memoryUtils from '../../utils/memoryUtils'
 
 import PubSub from 'pubsub-js' //引入发布消息
 
@@ -25,12 +26,15 @@ export default class Login extends Component {
             //---------------------------------------------------------------------------
             onFinish = (values) => {   //表单验证成功的回调
                 const {username,password} = values;
-                console.log(username,password)
+                // console.log(username,password)
                 if(values){  //不写判断不能.then
                     reqLogin(username,password).then(response=>{
                         const result =response.data.status
                         if(result===0){//密码正确跳转后台
+                            const user =response.data.data
+                            memoryUtils.user = user;//保存到内存中
                             message.success('登陆成功')
+                            console.log('用户信息',memoryUtils.user)
                             this.state.data.history.replace('/admin')
                         }else{
                             message.error('用户名或密码错误')
