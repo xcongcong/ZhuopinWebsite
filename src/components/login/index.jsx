@@ -3,6 +3,7 @@ import { Form, Input, Button,message } from 'antd';
 import './index.css'
 import close from './images/guanbi.png'
 import memoryUtils from '../../utils/memoryUtils'
+import storageUtils from '../../utils/storageUtils';
 
 import PubSub from 'pubsub-js' //引入发布消息
 
@@ -29,16 +30,18 @@ export default class Login extends Component {
                 // console.log(username,password)
                 if(values){  //不写判断不能.then
                     reqLogin(username,password).then(response=>{
-                        const result =response.data.status
-                        if(result===0){//密码正确跳转后台
-                            const user =response.data.data
+                        const result =response.data
+                        if(result.status===0){//密码正确跳转后台
+                            const user =result.data
                             memoryUtils.user = user;//保存到内存中
+                            // storageUtils.saveUser(user)//保存到浏览器缓存
                             message.success('登陆成功')
-                            console.log('用户信息',memoryUtils.user)
                             this.state.data.history.replace('/admin')
                         }else{
                             message.error('用户名或密码错误')
                         }
+                    }).catch(error=>{
+                        message.error('无法连接到服务器')
                     })
                 }
                 
@@ -54,6 +57,11 @@ export default class Login extends Component {
 
 
     render() {
+        //优化，如果内存中有用户信息，说明已经登陆，就自动跳转到管理页面
+        const user = memoryUtils.user  //如果内存中有用户信息了
+        // if(user){
+        //     return <Redirect to={'/admin'}/>
+        // }
         return (
             <div className="login">
                 <div className="login-bg">

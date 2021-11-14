@@ -1,0 +1,19 @@
+.left-nav {
+  color: white;
+}
+.left-nav .left-nav-header {
+  display: flex;
+  align-items: center;
+  height: 13vh;
+  background-color: #002766;
+  padding: 2vh;
+}
+.left-nav .left-nav-header img {
+  width: 10vh;
+}
+.left-nav .left-nav-header h1 {
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+  margin-bottom: 0;
+}

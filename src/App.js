@@ -1,7 +1,7 @@
 
 import './App.css';
 import {BrowserRouter,Route,Switch} from 'react-router-dom'
-import React, { Component,lazy,Suspense } from 'react'
+import {React,Component,lazy,Suspense } from 'react'
 import { Spin } from 'antd';
 
 // import Admin from '../src/components/pages/admin'
