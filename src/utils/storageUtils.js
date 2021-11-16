@@ -1,19 +1,31 @@
 //此文件用户维持登陆、用户登陆登出
 import store from 'store'  //第三方库，用于删除用户，维持登陆
+const USER_KEY='user_key'
 export default {
-    //保存用户
-    saveUser(user){
-        store.set('user_key', user)  //不加引号就报错，'user_key'是store内部定义的
-    },
-    //读取用户
-    getUser(){
-        return store.get('user_key')||{}
-    },
-    //删除用户，退出登陆
-    removeUser(){
-        store.remove('user_key')
+        /*
+        保存user
+        */
+        saveUser (user) {
+            // localStorage.setItem(USER_KEY, JSON.stringify(user))
+            store.set(USER_KEY, user)
+        },
+
+        /*
+        读取user
+        */
+        getUser () {
+            // return JSON.parse(localStorage.getItem(USER_KEY) || '{}')
+            return store.get(USER_KEY) || {}
+        },
+
+        /*
+        删除user
+        */
+        removeUser () {
+            // localStorage.removeItem(USER_KEY)
+            store.remove(USER_KEY)
+        }
     }
-}
 
 
 

@@ -8,15 +8,16 @@ import {BrowserRouter} from 'react-router-dom'
 import storageUtils from './utils/storageUtils';
 import memoryStorage from './utils/memoryUtils';
 //读取浏览器缓存中的用户数据，login组件 store第三方库保存的
-// const user =storageUtils.getUser()
-// memoryStorage.user=user
+//维持登陆
+const user = storageUtils.getUser()
+memoryStorage.user = user
 
 
 
 
 ReactDOM.render(
     <BrowserRouter>
-          <App />
+        <App />
     </BrowserRouter>,document.getElementById('root')
 );
 

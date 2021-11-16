@@ -60,6 +60,7 @@
     "postcss-safe-parser": "5.0.2",
     "prompts": "2.4.0",
     "pubsub-js": "^1.9.3",
+    "qweather-icons": "^1.1.0",
     "react": "^17.0.2",
     "react-app-polyfill": "^2.0.0",
     "react-app-rewired": "^2.1.8",

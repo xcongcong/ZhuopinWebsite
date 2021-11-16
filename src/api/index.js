@@ -1,12 +1,13 @@
 import ajax from './ajax'
 import jsonp from 'jsonp'
+const BASE=''
 
 //const取名字
 export const reqLogin = (username,password)=>ajax('/login',{username,password},'POST')  //请求登陆
 
 
-
-
+//获取所有角色的列表----------------角色管理组件使用
+export const reqRoles =()=>ajax(BASE+'/manage/role/list')
 //jsonp请求,只能get请求 ，可以跨域不用配置代理
 export const reqWeather =(city)=>{
     return new Promise((resolve,reject)=>{

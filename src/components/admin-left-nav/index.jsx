@@ -46,11 +46,15 @@ export default class Leftnav extends Component {
                         </SubMenu>
 
                         <Menu.Item key="2" icon={<UserOutlined />}>
-                            用户管理
+                            <Link to='/admin/user'>
+                                用户管理
+                            </Link>
                         </Menu.Item>
 
                         <Menu.Item key="3" icon={<SafetyOutlined />}>
-                            角色管理
+                            <Link to='/admin/role'>
+                                角色管理
+                            </Link>
                         </Menu.Item>
 
                         <SubMenu key="sub2" icon={<BarChartOutlined />} title="数据可视化">
