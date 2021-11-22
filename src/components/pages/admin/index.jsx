@@ -9,8 +9,15 @@ import PubSub from 'pubsub-js'
 //----------------------引入子路由组件
 import Home from '../home'
 import Category from '../category'
+import Product from '../product'
 import Role from '../../pages/role'
 import User from '../../pages/user'
+import Bar from '../../pages/bar'
+import Line from '../../pages/line'
+import Pie from '../../pages/pie'
+import Detail from '../../pages/detail'
+import AddUpdate from '../../pages/addupdate'
+
 
 
 
@@ -42,8 +49,15 @@ export default class Admin extends Component {
                                 {/* <Role/> */}
                                 <Route path="/admin/home" component={Home} />
                                 <Route path='/admin/category' component={Category} />
+                                <Route path='/admin/product' component={Product} />
                                 <Route path="/admin/role" component={Role} />
                                 <Route path="/admin/user" component={User} />
+                                <Route path="/admin/charts/pie" component={Pie} />
+                                <Route path="/admin/charts/bar" component={Bar} />
+                                <Route path="/admin/charts/line" component={Line} />
+                                <Route path="/admin/detail" component={Detail}/>
+                                <Route path="/admin/addupdata" component={AddUpdate}/>
+                                <Redirect to='/admin/home'/>
                             </Switch>
                         </Content>
 

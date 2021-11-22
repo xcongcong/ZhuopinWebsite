@@ -7,6 +7,7 @@ import {Redirect} from 'react-router-dom'
 import { Modal, Button } from 'antd';
 import PubSub from 'pubsub-js' //引入发布消息
 import memoryUtils from '../../utils/memoryUtils'
+import LinkButton from '../../components/Link-Button'
 
 export default class Headernav extends Component {
     state={
@@ -67,7 +68,7 @@ export default class Headernav extends Component {
             <div className="header">
                 <div className="header-top">
                     <span>欢迎:admin</span>
-                    <a href="javascript:" onClick={this.logout}>退出</a>
+                    <LinkButton onClick={this.logout}>退出</LinkButton>
                 </div>
                 <div className="header-bottom">
                     <div className="header-bottom-left">首页</div>

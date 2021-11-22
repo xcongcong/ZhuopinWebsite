@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
-
+import './index.css'
 export default class Home extends Component {
     render() {
         return (
-            <div>
-                我是路由home首页路由
+            <div className="home">
+                欢迎使用SEE后台管理系统,版本V0.0.1
             </div>
         )
     }
